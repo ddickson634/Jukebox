@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <title>JUKEBOX</title>
+
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="jukeboxcss.css">
+
+</head>
+
+<body>
+
+
+    <audio id="music">
+
+        <source src="" type="audio/mpeg"/>
+
+    </audio>
+
+    <div id="audioplayer">
+
+        <header>JUKEBOX</header>
+
+        <p>**SELECT A SONG, OR CLICK PLAY**
+
+            <select size=5 name="mylist" id="mylist" onchange="myJukebox.playAudio" onended="myJukebox.nextAudio">
+
+                <option value="music/slow_grind.mp3">1 . Tory Lanez - Slow Grind</option>
+
+                <option value="music/turn_on_the_lights.mp3">2 . Future - Turn On the Lights</option>
+
+                <option value="music/Need_a_Girl.mp3">3. Tory Lanez - Need a Girl</option>
+
+                <option value="music/proud_family.mp3">4 . Tory Lanez - Proud Family</option>
+
+                <option value="music/komt.mp3">5. August Alsina - Kissing on My Tattoos</option>
+
+                <option value="music/pain_killer.mp3">6. Trey Songs - Pain Killer</option>
+
+                <option value="music/the_breakup.mp3">7. Chris Brown - The Breakup</option>
+
+            </select>
+        </p>
+
+        <div class="jbbuttons">
+
+            <button id="paButton" type="button" onclick="myJukebox.playAudio()"><img src="images/playbutton.png" alt="PLAY/PAUSE"></button>
+
+            <button id="plButton" type="button" onclick="myJukebox.playAudio()"><img src="images/playbutton1.png" alt="PLAY/PAUSE"></button>
+
+            <button id="stButton" type="button" onclick="myJukebox.stopAudio()"><img src="images/StopButton.png" alt="PLAY/PAUSE"></button>
+
+        </div>
+
+        <!------------------SOUNDCLOUD SECTION ---------------------->
+
+        <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+        <script src="API_JS.js"></script>
+        <header>SOUNDCLOUD JUKEBOX</header>
+        
+        <p>**SEARCH FOR SONG/ARTIST OR CLICK PLAY AND LET THE JUKEBOX DO THE REST**</p>
+
+        <div id="search">
+            SEARCH:<input type="text" id="searchText">
+            <input type="submit" value="Submit" onclick="sjc.searchTracks()" id="search_button">
+        </div>
+
+        <container id="info">
+            <div id="image">
+                <img id="artwork" src="#" alt="no image provided">
+            </div>
+            <h2 id="title"></h2>
+            <h2 id="genre"></h2>
+            <a id="songLink" target="_blank">CLICK HERE TO SONG LINK</a>
+            <br />
+            <a id="artistLink" target="_blank">CLICK HERE TO VIEW ARTIST LINK</a>
+        </container>
+
+
+            <div id="cust_butt">
+                <button id="pause" type="button" onclick="sjc.pauseSong()"><img src="images/playbutton.png"></button>
+                <button id="play" type="button" onclick="sjc.playNext()"><img src="images/playbutton1.png"></button>
+                <button id="stop" type="button" onclick="sjc.stopSong()"><img src="images/StopButton.png"></button>
+            </div>
+
+            <div id="controls">
+
+                <button id="previous" onclick="sjc.backupSong()">Previous Song</button>
+                <button id="next" onclick="sjc.skipSong()">Next Song</button>
+
+            </div>
+    </div>
+
+
+    <p class="close">March 14th, 2018 - NYCDA</p>
+
+    <script src="jukeboxjs.js"></script>
+</body>
+
+</html>
