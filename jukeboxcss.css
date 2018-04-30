@@ -49,7 +49,8 @@ p {
 a{
     font-family: arial;
     font-weight: 600;
-    color: #808080
+    color: #808080;
+    margin: 8px
 }
 
 a:hover{
@@ -128,6 +129,12 @@ div.APIbuttons {
     display: flex;
 }
 
+#mylist{
+    border-radius: 25px;
+    margin: 0 auto 20px;
+    font-size: 25px;
+    text-align: center
+}
 
 #searchtext {
     width: 50%;
@@ -169,7 +176,7 @@ p.close {
 }
 
 img#artwork {
-    width: 200px;
+    width: 50%;
     margin: 0 auto;
     display: block;
 }

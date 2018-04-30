@@ -22,9 +22,9 @@
 
         <header>JUKEBOX</header>
 
-        <p>**SELECT A SONG, OR CLICK PLAY**
+        <p>**SELECT A SONG, OR CLICK PLAY**</p>
 
-            <select size=5 name="mylist" id="mylist" onchange="myJukebox.playAudio" onended="myJukebox.nextAudio">
+        <select size=4 name="mylist" id="mylist" onchange="myJukebox.playAudio" onended="myJukebox.nextAudio">
 
                 <option value="music/slow_grind.mp3">1 . Tory Lanez - Slow Grind</option>
 
@@ -41,7 +41,6 @@
                 <option value="music/the_breakup.mp3">7. Chris Brown - The Breakup</option>
 
             </select>
-        </p>
 
         <div class="jbbuttons">
 
@@ -58,7 +57,7 @@
         <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
         <script src="API_JS.js"></script>
         <header>SOUNDCLOUD JUKEBOX</header>
-        
+
         <p>**SEARCH FOR SONG/ARTIST OR CLICK PLAY AND LET THE JUKEBOX DO THE REST**</p>
 
         <div id="search">
@@ -70,26 +69,29 @@
             <div id="image">
                 <img id="artwork" src="#" alt="no image provided">
             </div>
+            <div>
+                <a id="songLink" target="_blank">CLICK HERE TO SONG LINK</a> ||
+                <a id="artistLink" target="_blank">CLICK HERE TO VIEW ARTIST LINK</a>
+            </div>
+
             <h2 id="title"></h2>
             <h2 id="genre"></h2>
-            <a id="songLink" target="_blank">CLICK HERE TO SONG LINK</a>
-            <br />
-            <a id="artistLink" target="_blank">CLICK HERE TO VIEW ARTIST LINK</a>
+
         </container>
 
 
-            <div id="cust_butt">
-                <button id="pause" type="button" onclick="sjc.pauseSong()"><img src="images/playbutton.png"></button>
-                <button id="play" type="button" onclick="sjc.playNext()"><img src="images/playbutton1.png"></button>
-                <button id="stop" type="button" onclick="sjc.stopSong()"><img src="images/StopButton.png"></button>
-            </div>
+        <div id="cust_butt">
+            <button id="pause" type="button" onclick="sjc.pauseSong()"><img src="images/playbutton.png"></button>
+            <button id="play" type="button" onclick="sjc.playNext()"><img src="images/playbutton1.png"></button>
+            <button id="stop" type="button" onclick="sjc.stopSong()"><img src="images/StopButton.png"></button>
+        </div>
 
-            <div id="controls">
+        <div id="controls">
 
-                <button id="previous" onclick="sjc.backupSong()">Previous Song</button>
-                <button id="next" onclick="sjc.skipSong()">Next Song</button>
+            <button id="previous" onclick="sjc.backupSong()">Previous Song</button>
+            <button id="next" onclick="sjc.skipSong()">Next Song</button>
 
-            </div>
+        </div>
     </div>
 
 
